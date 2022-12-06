@@ -6,6 +6,7 @@ import matplotlib as pyplot
 
 training_data_folder_path = 'dataset/training-data'
 test_data_folder_path = 'dataset/test-data'
+
 lbpcascade_frontalface = 'opencv_xml_files/lbpcascade_frontalface.xml'
 
 def detect_face(input_img):
