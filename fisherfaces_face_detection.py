@@ -21,7 +21,6 @@ def detect_face(input_img):
     if (len(faces) == 0):
         return -1, -1
     (x, y, w, h) = faces[0]
-    print(faces)
     return image[y:y+w, x:x+h], faces[0]
 
 def prepare_training_data(training_data_folder_path):
@@ -70,12 +69,12 @@ def predict(test_image):
     label_text = tags[label[0]]
     draw_rectangle(test_image, rect)
     draw_text(test_image, label_text, rect[0], rect[1]-5)
-    print(label_text)
+    print(label)
     return test_image, label_text
 
 tags = ['0', '1', '2', '3', '4', '5', '6']
 
-cap = cv2.VideoCapture('test_recording_01.h264')
+cap = cv2.VideoCapture('test_recording.avi')
 count = 0
 
 while cap.isOpened():
